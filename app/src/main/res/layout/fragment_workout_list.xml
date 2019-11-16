@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:orientation="vertical"
+    tools:context=".WorkoutSelectFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/WorkoutCancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="center_vertical"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/cancel_button"
+            android:textColor="#ffffff"
+            android:text="Cancel"
+            android:textAlignment="center"
+            android:stateListAnimator="@null"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:gravity="center_horizontal|center_vertical"
+            android:hint="Search Exercises"
+            android:textColor="@color/material_text_color_white_text"
+            android:inputType="text"
+            android:textSize="25sp" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/WorkoutCustomise"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:gravity="center_vertical"
+            android:textColor="@color/material_text_color_white_text"
+            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/material_text_color_black_secondary_text"
+            android:text="Add Exercise"
+            android:textAlignment="center"
+            android:stateListAnimator="@null"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+</LinearLayout>
